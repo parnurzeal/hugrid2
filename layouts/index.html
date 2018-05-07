@@ -1,12 +1,14 @@
 {{ partial "header" . }}
 <div class="container mt-3">
-  <div class="row justify-content-md-center">
-    <div class="col-md-auto">
+  <div class="row justify-content-center">
+    <div class="col-auto">
       <img style="border: 1px solid #ddd; border-radius:50%; width: 150px;" src="/images/chichi-sticks-logo.png"></img>
     </div>
   </div>
-  <div class="row justify-content-md-center">
-    <h1>{{ with .Site.Params.title }}{{ . | markdownify }}{{ end }}</h1>
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <h1>{{ with .Site.Params.title }}{{ . | markdownify }}{{ end }}</h1>
+    </div>
   </div>
 
   <div class="row justify-content-md-center">
