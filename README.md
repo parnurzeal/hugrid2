@@ -1,2 +1,3 @@
-# hugrid2
-Better hugrid
+# Hugrid2
+
+Better Hugrid
