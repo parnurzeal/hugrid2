@@ -20,12 +20,18 @@
   </div>
 
   <ul id="og-grid" class="og-grid">
-    {{ range $.Site.Data.items.items }}
+    {{ range sort $.Site.RegularPages "Params.gridorder" }}
+    {{ if and (and (isset .Params "gridimage") (isset .Params "gridthumb")) (isset .Params "gridalt") }}
     <li>
-      <a href="{{.url}}" data-largesrc="{{.image}}" data-title="{{.title}}" data-description="{{.description }}" data-buttontext="{{.buttontext}}">
-        <img src="{{.thumb}}" alt="{{.alt}}"/>
+      <a href="{{.URL}}"
+        data-largesrc="{{.Params.gridimage}}"
+        data-title="{{.Title}}"
+        data-description="{{.Description }}"
+        data-buttontext="{{$.Site.Params.buttontext}}">
+        <img src="{{.Params.gridthumb}}" alt="{{.Params.gridalt}}"/>
       </a>
     </li>
+    {{ end }}
     {{ end }}
   </ul>
 </div>
